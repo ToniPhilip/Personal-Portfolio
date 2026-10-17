@@ -1,0 +1,589 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Learn more about Toni Philip, my interests, learning journey, goals, and passion for web development.">
+
+    <title>About Me | Toni Philip</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        rel="stylesheet"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- About page stylesheet -->
+    <link rel="stylesheet" href="about.css">
+
+    <!-- Shared JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="brand-icon">TP</span>
+                Toni Philip
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html"
+                           aria-current="page">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a href="contact.html" class="btn btn-purple">
+                            Hire Me
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ABOUT HERO -->
+    <header class="about-hero">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+
+                <div class="col-lg-7 about-hero-content">
+                    <span class="about-eyebrow">
+                        <i class="bi bi-person-heart"></i>
+                        GET TO KNOW ME
+                    </span>
+
+                    <h1>
+                        More Than Code,
+                        <span class="gradient-text">
+                            A Story of Growth.
+                        </span>
+                    </h1>
+
+                    <p class="about-hero-description">
+                        Welcome to my world! I'm Toni Philip, an aspiring
+                        web developer passionate about technology,
+                        creativity, continuous learning, and building
+                        meaningful digital experiences.
+                    </p>
+
+                    <div class="about-hero-buttons">
+                        <a href="project.html" class="btn btn-purple btn-lg">
+                            Explore My Projects
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                        <a href="#my-story" class="btn btn-outline-purple btn-lg">
+                            My Story
+                            <i class="bi bi-arrow-down"></i>
+                        </a>
+                    </div>
+
+                    <div class="about-quick-facts">
+                        <div class="quick-fact">
+                            <i class="bi bi-code-slash"></i>
+                            <span>Web Development</span>
+                        </div>
+
+                        <div class="quick-fact">
+                            <i class="bi bi-lightbulb"></i>
+                            <span>Creative Thinking</span>
+                        </div>
+
+                        <div class="quick-fact">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            <span>Continuous Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="about-portrait-wrapper">
+
+                        <div class="portrait-decoration portrait-decoration-one"></div>
+                        <div class="portrait-decoration portrait-decoration-two"></div>
+
+                        <!-- Replace this image URL with your own portrait -->
+                        <img
+                            src="Screenshot 2026-10-10 165356.png"
+                            alt="Creative workspace representing Toni Philip's interest in technology"
+                            class="about-portrait"
+                            fetchpriority="high"
+                        >
+
+                        <!-- <div class="portrait-caption">
+                            <div class="caption-icon">
+                                <i class="bi bi-stars"></i>
+                            </div>
+
+                            <div>
+                                <strong>Always Growing</strong>
+                                <span>One project at a time</span>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- MY STORY -->
+    <section class="about-story section-padding" id="my-story">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <span class="section-label">MY BACKGROUND</span>
+                <h2>The Story Behind <span class="gradient-text">The Developer</span></h2>
+                <p>
+                    Every developer starts somewhere. This is the beginning
+                    of my journey into technology and web development.
+                </p>
+            </div>
+
+            <div class="row align-items-center gy-5 mt-4">
+
+                <div class="col-lg-5">
+                    <div class="story-visual">
+                        <div class="story-icon-large">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+
+                        <div class="story-floating-icon story-icon-one">
+                            <i class="bi bi-filetype-html"></i>
+                        </div>
+
+                        <div class="story-floating-icon story-icon-two">
+                            <i class="bi bi-filetype-css"></i>
+                        </div>
+
+                        <div class="story-floating-icon story-icon-three">
+                            <i class="bi bi-filetype-js"></i>
+                        </div>
+
+                        <p class="story-visual-text">
+                            Learning today.
+                            <span>Building tomorrow.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="story-content">
+
+                        <span class="story-small-label">
+                            HELLO, I'M TONI
+                        </span>
+
+                        <h3>Curiosity Is Where My Journey Begins</h3>
+
+                        <p>
+                            I'm Toni Philip, an aspiring developer interested
+                            in how technology can transform ideas into
+                            useful digital experiences. I enjoy exploring
+                            how websites are structured, designed, and made
+                            interactive.
+                        </p>
+
+                        <p>
+                            My current learning interests include HTML,
+                            CSS, Bootstrap, and GitHub. Through practice
+                            and personal projects, I'm working to improve
+                            my coding skills and develop a stronger
+                            understanding of responsive web design.
+                        </p>
+
+                        <p>
+                            I believe progress comes from curiosity,
+                            consistency, patience, and the willingness
+                            to learn from mistakes. My goal is to continue
+                            growing as a developer while creating projects
+                            that are useful, attractive, and accessible.
+                        </p>
+
+                        <div class="story-highlight">
+                            <i class="bi bi-quote"></i>
+                            <p>
+                                My goal is not just to write code, but to
+                                use creativity and technology to solve
+                                problems and make ideas come to life.
+                            </p>
+                        </div>
+
+                        <a href="contact.html" class="btn btn-purple mt-3">
+                            Let's Connect
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MY VALUES -->
+    <section class="about-values section-padding section-soft">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <span class="section-label">WHAT DRIVES ME</span>
+                <h2>My Values and <span class="gradient-text">Mindset</span></h2>
+                <p>
+                    The principles that guide the way I learn,
+                    approach challenges, and work toward my goals.
+                </p>
+            </div>
+
+            <div class="row g-4 mt-4">
+
+                <div class="col-md-6 col-lg-3">
+                    <article class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-book-half"></i>
+                        </div>
+                        <h3>Continuous Learning</h3>
+                        <p>
+                            I believe there is always something new to
+                            discover. I aim to keep improving my skills
+                            through practice and exploration.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <article class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-lightbulb"></i>
+                        </div>
+                        <h3>Creativity</h3>
+                        <p>
+                            I enjoy exploring different ideas and finding
+                            ways to turn concepts into engaging digital
+                            experiences.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <article class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-puzzle"></i>
+                        </div>
+                        <h3>Problem Solving</h3>
+                        <p>
+                            I approach challenges step by step, learning
+                            from errors and looking for practical,
+                            effective solutions.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <article class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-bullseye"></i>
+                        </div>
+                        <h3>Consistency</h3>
+                        <p>
+                            I value steady progress, focused effort,
+                            and the patience needed to improve
+                            one step at a time.
+                        </p>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MY JOURNEY -->
+    <section class="about-journey section-padding">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <span class="section-label">MY DEVELOPMENT PATH</span>
+                <h2>My Learning <span class="gradient-text">Journey</span></h2>
+                <p>
+                    A flexible roadmap of the skills and experiences
+                    I'm working toward. Update these milestones as
+                    your journey progresses.
+                </p>
+            </div>
+
+            <div class="timeline mt-5">
+
+                <article class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="bi bi-compass"></i>
+                    </div>
+
+                    <div class="timeline-card">
+                        <span class="timeline-step">01 · THE BEGINNING</span>
+                        <h3>Discovering Web Development</h3>
+                        <p>
+                            Exploring how websites work, learning the
+                            basics of the web, and discovering the role
+                            of code in creating digital experiences.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="bi bi-code-square"></i>
+                    </div>
+
+                    <div class="timeline-card">
+                        <span class="timeline-step">02 · BUILDING FOUNDATIONS</span>
+                        <h3>Learning HTML and CSS</h3>
+                        <p>
+                            Practicing page structure, styling,
+                            layouts, typography, colors, and responsive
+                            design principles.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="bi bi-lightning-charge"></i>
+                    </div>
+
+                    <div class="timeline-card">
+                        <span class="timeline-step">03 · ADDING INTERACTIVITY</span>
+                        <h3>Exploring Bootstrap and GitHub</h3>
+                        <p>
+                            Working toward interactive components,
+                            reusable layouts, mobile navigation,
+                            and dynamic website functionality.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="bi bi-rocket-takeoff"></i>
+                    </div>
+
+                    <div class="timeline-card">
+                        <span class="timeline-step">04 · WHAT'S NEXT</span>
+                        <h3>Creating Better Projects</h3>
+                        <p>
+                            Building practical projects, improving
+                            code quality, learning new tools, and
+                            developing a portfolio that reflects
+                            my growing abilities.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FUTURE GOALS -->
+    <section class="about-goals section-padding section-soft">
+        <div class="container">
+
+            <div class="row align-items-center gy-4">
+
+                <div class="col-lg-7">
+                    <span class="section-label">LOOKING AHEAD</span>
+
+                    <h2>
+                        Focused on Learning.
+                        <span class="gradient-text">Ready to Grow.</span>
+                    </h2>
+
+                    <p class="goals-description">
+                        I'm working toward becoming a capable developer
+                        who can design, build, and maintain useful
+                        digital products. I want to strengthen my
+                        foundations, learn from real projects, and
+                        keep exploring new technologies.
+                    </p>
+
+                    <div class="goal-list">
+                        <div class="goal-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Improve my frontend development skills</span>
+                        </div>
+
+                        <div class="goal-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Build responsive, accessible websites</span>
+                        </div>
+
+                        <div class="goal-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Develop practical personal projects</span>
+                        </div>
+
+                        <div class="goal-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Continue learning and growing professionally</span>
+                        </div>
+                    </div>
+
+                    <a href="skills.html" class="btn btn-purple mt-4">
+                        Explore My Skills
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="goals-image-wrapper">
+                        <img
+                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85"
+                            alt="Computer and coding workspace"
+                            loading="lazy"
+                        >
+
+                        <div class="goals-image-label">
+                            <i class="bi bi-stars"></i>
+                            <span>Progress Over Perfection</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+    <section class="section-padding about-cta-wrapper">
+        <div class="container">
+            <div class="about-cta text-center">
+
+                <div class="cta-icon">
+                    <i class="bi bi-chat-heart"></i>
+                </div>
+
+                <span class="section-label">LET'S WORK TOGETHER</span>
+
+                <h2>Have a Project or an Idea?</h2>
+
+                <p>
+                    I'd love to connect, exchange ideas, and explore
+                    opportunities to learn, create, and grow.
+                </p>
+
+                <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+                    <a href="contact.html" class="btn btn-light btn-lg">
+                        Contact Me
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+
+                    <a href="project.html" class="btn btn-outline-light btn-lg">
+                        View My Projects
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+
+                <div class="col-md-6">
+                    <a class="footer-brand" href="index.html">
+                        TP. Toni Philip
+                    </a>
+
+                    <p class="mb-0">
+                        Learning, building, and creating with code.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-links mb-2">
+                        <a href="index.html">Home</a>
+                        <a href="skills.html">Skills</a>
+                        <a href="project.html">Projects</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+
+                    <p class="mb-0">
+                        &copy; <span class="current-year"></span>
+                        Toni Philip. All rights reserved.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+</html>
+```

@@ -1,0 +1,689 @@
+/* =========================================================
+   SKILLS PAGE
+   Page-specific styles for skills.html
+   Shared styling remains in css/style.css
+   ========================================================= */
+
+.skills-page {
+    --skills-purple: var(--primary, #7c3aed);
+    --skills-purple-dark: var(--primary-dark, #4c1d95);
+    --skills-purple-light: var(--primary-light, #ede9fe);
+    --skills-ink: var(--ink, #171329);
+    --skills-muted: #6b7280;
+    --skills-surface: #ffffff;
+    --skills-soft-bg: #f8f7fc;
+}
+
+/* General page typography */
+
+.skills-page h1,
+.skills-page h2,
+.skills-page h3,
+.skills-page h4 {
+    font-family: "Poppins", sans-serif;
+}
+
+.skills-page p,
+.skills-page a,
+.skills-page span {
+    font-family: "DM Sans", sans-serif;
+}
+
+.skills-page .text-gradient {
+    color: var(--skills-purple);
+    background: linear-gradient(
+        110deg,
+        var(--skills-purple-dark),
+        var(--skills-purple),
+        #a78bfa
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Shared page section spacing */
+
+.skills-page .section-padding {
+    padding: 100px 0;
+}
+
+.skills-page .section-heading {
+    max-width: 760px;
+    margin: 0 auto 50px;
+}
+
+.skills-page .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 16px;
+    color: var(--skills-purple);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.skills-page .section-title {
+    margin-bottom: 18px;
+    color: var(--skills-ink);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.skills-page .section-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--skills-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.skills-page .section-heading .section-description {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.skills-page .skills-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 170px 0 100px;
+    background:
+        radial-gradient(
+            circle at 85% 35%,
+            rgba(124, 58, 237, 0.09),
+            transparent 28%
+        ),
+        linear-gradient(180deg, #fcfbff 0%, #ffffff 100%);
+}
+
+.skills-page .skills-hero::before {
+    position: absolute;
+    top: 110px;
+    right: -110px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(124, 58, 237, 0.12);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.skills-page .skills-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.skills-page .skills-hero-title {
+    max-width: 760px;
+    margin: 0 0 24px;
+    color: var(--skills-ink);
+    font-size: clamp(2.6rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.8px;
+}
+
+.skills-page .skills-hero-description {
+    max-width: 650px;
+    margin-bottom: 30px;
+    color: var(--skills-muted);
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+.skills-page .skills-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.skills-page .skills-hero-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 23px;
+    font-weight: 600;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.skills-page .skills-hero-actions .btn:hover {
+    transform: translateY(-3px);
+}
+
+.skills-page .skills-hero-actions .btn-primary {
+    border-color: var(--skills-purple);
+    background-color: var(--skills-purple);
+}
+
+.skills-page .skills-hero-actions .btn-primary:hover {
+    border-color: var(--skills-purple-dark);
+    background-color: var(--skills-purple-dark);
+    box-shadow: 0 12px 25px rgba(124, 58, 237, 0.2);
+}
+
+.skills-page .skills-hero-actions .btn-outline-primary {
+    border-color: var(--skills-purple);
+    color: var(--skills-purple);
+}
+
+.skills-page .skills-hero-actions .btn-outline-primary:hover {
+    background-color: var(--skills-purple);
+    color: #ffffff;
+}
+
+/* Decorative hero illustration */
+
+.skills-page .skills-hero-visual {
+    position: relative;
+    display: grid;
+    min-height: 340px;
+    place-items: center;
+}
+
+.skills-page .skills-visual-circle {
+    display: grid;
+    width: 235px;
+    height: 235px;
+    border: 1px solid rgba(124, 58, 237, 0.18);
+    border-radius: 50%;
+    background: linear-gradient(
+        140deg,
+        #ede9fe,
+        #ffffff 70%
+    );
+    box-shadow: 0 25px 70px rgba(76, 29, 149, 0.12);
+    color: var(--skills-purple);
+    font-size: 6rem;
+    place-items: center;
+    animation: skills-float 5s ease-in-out infinite;
+}
+
+.skills-page .skills-floating-icon {
+    position: absolute;
+    display: grid;
+    width: 66px;
+    height: 66px;
+    border: 1px solid #f0ebfc;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 35px rgba(31, 24, 56, 0.1);
+    color: var(--skills-purple);
+    font-size: 2rem;
+    place-items: center;
+}
+
+.skills-page .skills-floating-one {
+    top: 38px;
+    left: 12%;
+    transform: rotate(-8deg);
+}
+
+.skills-page .skills-floating-two {
+    top: 35px;
+    right: 10%;
+    transform: rotate(8deg);
+}
+
+.skills-page .skills-floating-three {
+    right: 14%;
+    bottom: 35px;
+    transform: rotate(-7deg);
+}
+
+@keyframes skills-float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* =========================================================
+   TECHNICAL SKILL CARDS
+   ========================================================= */
+
+.skills-page .technical-skills-section {
+    background: #ffffff;
+}
+
+.skills-page .skill-card {
+    position: relative;
+    overflow: hidden;
+    padding: 30px 25px;
+    border: 1px solid #eee9f8;
+    border-radius: 20px;
+    background-color: var(--skills-surface);
+    box-shadow: 0 8px 25px rgba(31, 24, 56, 0.035);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.skills-page .skill-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--skills-purple);
+    content: "";
+    transition: width 0.3s ease;
+}
+
+.skills-page .skill-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(124, 58, 237, 0.28);
+    box-shadow: 0 18px 40px rgba(76, 29, 149, 0.09);
+}
+
+.skills-page .skill-card:hover::before {
+    width: 100%;
+}
+
+.skills-page .skill-icon {
+    display: grid;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 22px;
+    border-radius: 17px;
+    background: var(--skills-purple-light);
+    color: var(--skills-purple);
+    font-size: 1.9rem;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+    place-items: center;
+}
+
+.skills-page .skill-card:hover .skill-icon {
+    background-color: var(--skills-purple);
+    color: #ffffff;
+}
+
+.skills-page .skill-card h3 {
+    margin-bottom: 12px;
+    color: var(--skills-ink);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.skills-page .skill-card p {
+    min-height: 76px;
+    margin-bottom: 20px;
+    color: var(--skills-muted);
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+.skills-page .skill-tag {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 50px;
+    background-color: #f5f2fc;
+    color: var(--skills-purple-dark);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* =========================================================
+   PROFICIENCY SECTION
+   ========================================================= */
+
+.skills-page .proficiency-section {
+    background-color: var(--skills-soft-bg);
+}
+
+.skills-page .proficiency-section .section-title {
+    margin-bottom: 20px;
+}
+
+.skills-page .proficiency-note {
+    margin-top: 24px;
+    padding: 15px 17px;
+    border: 1px solid rgba(124, 58, 237, 0.12);
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: var(--skills-muted);
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.skills-page .proficiency-note i {
+    color: var(--skills-purple);
+}
+
+.skills-page .proficiency-card {
+    padding: 35px;
+    border: 1px solid #eee9f8;
+    border-radius: 22px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 40px rgba(31, 24, 56, 0.05);
+}
+
+.skills-page .proficiency-item + .proficiency-item {
+    margin-top: 28px;
+}
+
+.skills-page .proficiency-label {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 12px;
+    color: var(--skills-ink);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.skills-page .proficiency-label span:last-child {
+    color: var(--skills-purple);
+}
+
+.skills-page .proficiency-item .progress {
+    overflow: hidden;
+    height: 9px;
+    border-radius: 30px;
+    background-color: #eeeaf6;
+}
+
+.skills-page .proficiency-item .progress-bar {
+    border-radius: 30px;
+    background: linear-gradient(
+        90deg,
+        var(--skills-purple-dark),
+        var(--skills-purple),
+        #a78bfa
+    );
+}
+
+/* =========================================================
+   WORKFLOW
+   ========================================================= */
+
+.skills-page .workflow-section {
+    background-color: #ffffff;
+}
+
+.skills-page .workflow-card {
+    position: relative;
+    padding: 32px 25px;
+    border: 1px solid #eee9f8;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(31, 24, 56, 0.035);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.skills-page .workflow-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(76, 29, 149, 0.09);
+}
+
+.skills-page .workflow-number {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    color: #e9e2f8;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.skills-page .workflow-icon {
+    display: grid;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 23px;
+    border-radius: 17px;
+    background-color: var(--skills-purple-light);
+    color: var(--skills-purple);
+    font-size: 1.7rem;
+    place-items: center;
+}
+
+.skills-page .workflow-card h3 {
+    margin-bottom: 13px;
+    color: var(--skills-ink);
+    font-size: 1.08rem;
+    font-weight: 700;
+}
+
+.skills-page .workflow-card p {
+    margin-bottom: 0;
+    color: var(--skills-muted);
+    font-size: 0.93rem;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   CALL TO ACTION
+   ========================================================= */
+
+.skills-page .skills-cta-section {
+    padding: 30px 0 100px;
+    background-color: #ffffff;
+}
+
+.skills-page .skills-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 30px;
+    border-radius: 28px;
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(255, 255, 255, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            125deg,
+            var(--skills-purple-dark),
+            var(--skills-purple)
+        );
+    color: #ffffff;
+}
+
+.skills-page .skills-cta::before,
+.skills-page .skills-cta::after {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.skills-page .skills-cta::before {
+    top: -100px;
+    left: -60px;
+}
+
+.skills-page .skills-cta::after {
+    right: -70px;
+    bottom: -115px;
+}
+
+.skills-page .skills-cta > * {
+    position: relative;
+    z-index: 1;
+}
+
+.skills-page .skills-cta .section-eyebrow {
+    color: #e9ddff;
+}
+
+.skills-page .skills-cta h2 {
+    margin-bottom: 18px;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+}
+
+.skills-page .skills-cta p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.skills-page .skills-cta .btn-light {
+    padding: 13px 26px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    color: var(--skills-purple-dark);
+    font-weight: 700;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.skills-page .skills-cta .btn-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+    .skills-page .section-padding {
+        padding: 80px 0;
+    }
+
+    .skills-page .skills-hero {
+        padding: 145px 0 75px;
+    }
+
+    .skills-page .skills-hero-visual {
+        min-height: 280px;
+    }
+
+    .skills-page .skills-visual-circle {
+        width: 205px;
+        height: 205px;
+        font-size: 5rem;
+    }
+
+    .skills-page .skills-floating-one {
+        left: 24%;
+    }
+
+    .skills-page .skills-floating-two {
+        right: 23%;
+    }
+
+    .skills-page .skills-floating-three {
+        right: 25%;
+    }
+
+    .skills-page .skill-card p {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .skills-page .section-padding {
+        padding: 65px 0;
+    }
+
+    .skills-page .skills-hero {
+        padding: 125px 0 60px;
+    }
+
+    .skills-page .skills-hero-title {
+        font-size: 2.35rem;
+        letter-spacing: -1px;
+    }
+
+    .skills-page .skills-hero-description {
+        font-size: 1rem;
+    }
+
+    .skills-page .skills-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .skills-page .skills-hero-actions .btn {
+        width: 100%;
+    }
+
+    .skills-page .skills-hero-visual {
+        min-height: 245px;
+    }
+
+    .skills-page .skills-visual-circle {
+        width: 175px;
+        height: 175px;
+        font-size: 4rem;
+    }
+
+    .skills-page .skills-floating-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 15px;
+        font-size: 1.6rem;
+    }
+
+    .skills-page .skills-floating-one {
+        top: 23px;
+        left: 12%;
+    }
+
+    .skills-page .skills-floating-two {
+        top: 22px;
+        right: 10%;
+    }
+
+    .skills-page .skills-floating-three {
+        right: 12%;
+        bottom: 15px;
+    }
+
+    .skills-page .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .skills-page .proficiency-card {
+        padding: 24px 18px;
+    }
+
+    .skills-page .skills-cta-section {
+        padding: 15px 0 65px;
+    }
+
+    .skills-page .skills-cta {
+        padding: 55px 22px;
+        border-radius: 20px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .skills-page *,
+    .skills-page *::before,
+    .skills-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

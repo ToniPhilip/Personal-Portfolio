@@ -1,0 +1,603 @@
+/* =========================================================
+   PROJECTS PAGE
+   Page-specific styles for project.html
+   Shared styling remains in css/style.css
+   ========================================================= */
+
+.project-page {
+    --project-purple: var(--primary, #7c3aed);
+    --project-purple-dark: var(--primary-dark, #4c1d95);
+    --project-purple-light: var(--primary-light, #ede9fe);
+    --project-ink: var(--ink, #171329);
+    --project-muted: #6b7280;
+    --project-border: #eee9f8;
+    --project-soft-bg: #f8f7fc;
+}
+
+/* General typography */
+
+.project-page h1,
+.project-page h2,
+.project-page h3,
+.project-page h4 {
+    font-family: "Poppins", sans-serif;
+}
+
+.project-page p,
+.project-page a,
+.project-page span,
+.project-page button {
+    font-family: "DM Sans", sans-serif;
+}
+
+.project-page .text-gradient {
+    color: var(--project-purple);
+    background: linear-gradient(
+        110deg,
+        var(--project-purple-dark),
+        var(--project-purple),
+        #a78bfa
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-page .section-padding {
+    padding: 100px 0;
+}
+
+.project-page .section-heading {
+    max-width: 760px;
+    margin: 0 auto 45px;
+}
+
+.project-page .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 16px;
+    color: var(--project-purple);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.project-page .section-title {
+    margin-bottom: 18px;
+    color: var(--project-ink);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.project-page .section-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--project-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.project-page .projects-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 170px 0 100px;
+    background:
+        radial-gradient(
+            circle at 10% 30%,
+            rgba(124, 58, 237, 0.08),
+            transparent 28%
+        ),
+        linear-gradient(180deg, #fcfbff 0%, #ffffff 100%);
+}
+
+.project-page .projects-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.project-page .projects-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.project-page .projects-hero-title {
+    margin-bottom: 24px;
+    color: var(--project-ink);
+    font-size: clamp(2.6rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.8px;
+}
+
+.project-page .projects-hero-description {
+    max-width: 690px;
+    margin: 0 auto 30px;
+    color: var(--project-muted);
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+.project-page .projects-hero .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    border-color: var(--project-purple);
+    background-color: var(--project-purple);
+    font-weight: 600;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-page .projects-hero .btn-primary:hover {
+    transform: translateY(-3px);
+    border-color: var(--project-purple-dark);
+    background-color: var(--project-purple-dark);
+    box-shadow: 0 12px 25px rgba(124, 58, 237, 0.2);
+}
+
+.project-page .projects-hero-decoration {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.project-page .decoration-circle {
+    position: absolute;
+    display: block;
+    border: 1px solid rgba(124, 58, 237, 0.12);
+    border-radius: 50%;
+}
+
+.project-page .decoration-circle-one {
+    top: 35px;
+    left: -100px;
+    width: 270px;
+    height: 270px;
+}
+
+.project-page .decoration-circle-two {
+    right: -105px;
+    bottom: -120px;
+    width: 320px;
+    height: 320px;
+}
+
+/* =========================================================
+   PROJECT GALLERY AND FILTER BUTTONS
+   ========================================================= */
+
+.project-page .projects-gallery-section {
+    background-color: #ffffff;
+}
+
+.project-page .project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto 42px;
+}
+
+.project-page .filter-btn {
+    padding: 11px 20px;
+    border: 1px solid var(--project-border);
+    border-radius: 50px;
+    background-color: #ffffff;
+    color: var(--project-muted);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.project-page .filter-btn:hover {
+    transform: translateY(-2px);
+    border-color: var(--project-purple);
+    color: var(--project-purple);
+}
+
+.project-page .filter-btn.active,
+.project-page .filter-btn[aria-pressed="true"] {
+    border-color: var(--project-purple);
+    background-color: var(--project-purple);
+    box-shadow: 0 8px 18px rgba(124, 58, 237, 0.16);
+    color: #ffffff;
+}
+
+.project-page .filter-btn:focus-visible {
+    outline: 3px solid rgba(124, 58, 237, 0.28);
+    outline-offset: 3px;
+}
+
+/* Respect hidden cards when filtering */
+
+.project-page .project-card[hidden],
+.project-page [hidden].project-card {
+    display: none !important;
+}
+
+/* =========================================================
+   PROJECT CARDS
+   ========================================================= */
+
+.project-page .project-item {
+    overflow: hidden;
+    border: 1px solid var(--project-border);
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 28px rgba(31, 24, 56, 0.045);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-page .project-item:hover {
+    transform: translateY(-7px);
+    border-color: rgba(124, 58, 237, 0.28);
+    box-shadow: 0 20px 42px rgba(76, 29, 149, 0.1);
+}
+
+.project-page .project-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(
+        135deg,
+        #ede9fe,
+        #f8f7fc
+    );
+}
+
+.project-page .project-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.55s ease;
+}
+
+.project-page .project-item:hover .project-image {
+    transform: scale(1.06);
+}
+
+.project-page .project-category-label {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    display: inline-block;
+    max-width: calc(100% - 30px);
+    padding: 7px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.94);
+    color: var(--project-purple-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    backdrop-filter: blur(8px);
+}
+
+.project-page .project-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - auto);
+    padding: 25px;
+}
+
+.project-page .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.project-page .project-tags span {
+    display: inline-block;
+    padding: 6px 9px;
+    border-radius: 6px;
+    background-color: #f5f2fc;
+    color: var(--project-purple-dark);
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.project-page .project-content h3 {
+    margin-bottom: 13px;
+    color: var(--project-ink);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.project-page .project-content > p {
+    margin-bottom: 24px;
+    color: var(--project-muted);
+    font-size: 0.94rem;
+    line-height: 1.8;
+}
+
+.project-page .project-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: auto;
+    padding-top: 17px;
+    border-top: 1px solid #f0edf6;
+}
+
+.project-page .project-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--project-purple);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.project-page .project-link:hover {
+    color: var(--project-purple-dark);
+}
+
+.project-page .project-link i {
+    transition: transform 0.2s ease;
+}
+
+.project-page .project-link:hover i {
+    transform: translate(3px, -3px);
+}
+
+.project-page .project-github-link {
+    display: grid;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--project-border);
+    border-radius: 50%;
+    color: var(--project-ink);
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+    place-items: center;
+}
+
+.project-page .project-github-link:hover {
+    border-color: var(--project-purple);
+    background-color: var(--project-purple);
+    color: #ffffff;
+}
+
+.project-page .project-link:focus-visible,
+.project-page .project-github-link:focus-visible {
+    outline: 3px solid rgba(124, 58, 237, 0.25);
+    outline-offset: 3px;
+}
+
+/* Empty state, used if a category has no matching projects */
+
+.project-page .empty-project-state {
+    padding: 55px 25px;
+    border: 1px dashed #d9cdef;
+    border-radius: 18px;
+    background-color: var(--project-soft-bg);
+    text-align: center;
+}
+
+.project-page .empty-project-state[hidden] {
+    display: none !important;
+}
+
+.project-page .empty-project-state > i {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: var(--project-purple);
+    font-size: 2.8rem;
+}
+
+.project-page .empty-project-state h3 {
+    margin-bottom: 10px;
+    color: var(--project-ink);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.project-page .empty-project-state p {
+    margin-bottom: 0;
+    color: var(--project-muted);
+    line-height: 1.7;
+}
+
+.project-page .projects-disclaimer {
+    margin: 36px auto 0;
+    color: var(--project-muted);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.project-page .projects-disclaimer i {
+    color: var(--project-purple);
+}
+
+/* =========================================================
+   CALL TO ACTION
+   ========================================================= */
+
+.project-page .projects-cta-section {
+    padding: 20px 0 100px;
+    background-color: #ffffff;
+}
+
+.project-page .projects-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 30px;
+    border-radius: 28px;
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(255, 255, 255, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            125deg,
+            var(--project-purple-dark),
+            var(--project-purple)
+        );
+    color: #ffffff;
+}
+
+.project-page .projects-cta::before,
+.project-page .projects-cta::after {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.project-page .projects-cta::before {
+    top: -100px;
+    left: -60px;
+}
+
+.project-page .projects-cta::after {
+    right: -70px;
+    bottom: -115px;
+}
+
+.project-page .projects-cta > * {
+    position: relative;
+    z-index: 1;
+}
+
+.project-page .projects-cta .section-eyebrow {
+    color: #e9ddff;
+}
+
+.project-page .projects-cta h2 {
+    margin-bottom: 18px;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+}
+
+.project-page .projects-cta p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.project-page .projects-cta .btn-light {
+    padding: 13px 26px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    color: var(--project-purple-dark);
+    font-weight: 700;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-page .projects-cta .btn-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+    .project-page .section-padding {
+        padding: 80px 0;
+    }
+
+    .project-page .projects-hero {
+        padding: 145px 0 80px;
+    }
+
+    .project-page .project-content {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .project-page .section-padding {
+        padding: 65px 0;
+    }
+
+    .project-page .projects-hero {
+        padding: 125px 0 65px;
+    }
+
+    .project-page .projects-hero-title {
+        font-size: 2.35rem;
+        letter-spacing: -1px;
+    }
+
+    .project-page .projects-hero-description {
+        font-size: 1rem;
+    }
+
+    .project-page .project-filters {
+        gap: 9px;
+        margin-bottom: 30px;
+    }
+
+    .project-page .filter-btn {
+        padding: 9px 14px;
+        font-size: 0.82rem;
+    }
+
+    .project-page .project-content {
+        padding: 20px;
+    }
+
+    .project-page .projects-cta-section {
+        padding: 15px 0 65px;
+    }
+
+    .project-page .projects-cta {
+        padding: 55px 22px;
+        border-radius: 20px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .project-page *,
+    .project-page *::before,
+    .project-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
